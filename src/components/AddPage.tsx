@@ -20,7 +20,7 @@ const AddPage = () => {
   useEffect(() => {
     getTransports().then((response) => {
       const statusResponce = response.status;
-      dispatch(getStatus(status, response.status));
+      dispatch(getStatus(status, response?.status || []));
       dispatch(addDataPages(response.data, response));
       if (statusResponce == 200) {
         setShowNotif(true);
