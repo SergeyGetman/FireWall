@@ -9,6 +9,9 @@ import { CustomTextEnum } from '../enam';
 import { useDispatch } from 'react-redux';
 import { addFromForm } from '../store/globalSlice';
 import { toast, ToastContainer } from 'react-toastify';
+import {IProduct} from "../types";
+
+
 
 export const Forms = () => {
   const dispatch = useDispatch();
@@ -33,7 +36,7 @@ export const Forms = () => {
 
   const handleFormSubmit = (data: any) => {
     if (data) {
-      dispatch(addFromForm(data));
+      dispatch(addFromForm(data as IProduct));
       reset();
       notify();
       setShowModal(false);
