@@ -38,7 +38,7 @@ export const ModalWindow = () => {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <WindowModalStyle width="100vh">
+          <WindowModalStyle >
             <Forms />
           </WindowModalStyle>
         </Modal>

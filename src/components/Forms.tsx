@@ -36,7 +36,7 @@ export const Forms = () => {
 
   const handleFormSubmit = (data: any) => {
     if (data) {
-      dispatch(addFromForm(data as IProduct));
+
       reset();
       notify();
       setShowModal(false);

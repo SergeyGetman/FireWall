@@ -12,16 +12,15 @@ const AddPage = () => {
   const notify = () => toast(CustomTextEnum.textMessageAdd);
   const [showNotif, setShowNotif] = useState(false);
   const { status } = useSelector((state: AccountPagesState | any) => state.globalState);
-  const st = useSelector((state) => console.log('this is state222', state));
-  console.log(st);
+
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     getTransports().then((response) => {
       const statusResponce = response.status;
-      dispatch(getStatus(status, response?.status || []));
-      dispatch(addDataPages(response.data, response));
+
+
       if (statusResponce == 200) {
         setShowNotif(true);
       }

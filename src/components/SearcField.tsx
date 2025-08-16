@@ -10,7 +10,7 @@ const SearchField = () => {
 
   const arraySort = [1, 4, 3, 2, 2, 6, 8, 0, 2, 3, 1, -1];
 
-  function sortArr(arr) {
+  function sortArr(arr): any {
     let newArr = [];
     let min = Infinity;
     let minNumb = Math.min.apply(null, arr);
@@ -18,12 +18,10 @@ const SearchField = () => {
     console.log('minNumb ', minNumb, ' + ', ' manNumb ', manNumb);
     for (let i = 0; i < arr.length; i++) {
       const curentElement = arr[i];
-      console.log('this is index', i);
       if (manNumb > curentElement) {
         newArr.push(curentElement);
       }
     }
-    console.log('this is newArr', newArr);
     return newArr;
   }
 
