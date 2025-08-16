@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import globalSlice from './globalSlice';
+import visState from "./checkedEnterSlice"
 
 const rootReducer = combineReducers({
   globalState: globalSlice,
+  visitState: visState
 });
 
 export const store = configureStore({
@@ -14,4 +16,7 @@ export const store = configureStore({
   },
 });
 
-export default rootReducer;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;

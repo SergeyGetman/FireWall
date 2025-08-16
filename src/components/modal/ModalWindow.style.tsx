@@ -7,7 +7,7 @@ export const WindowModalStyle = styled(Typography)(( ) => ({
   transform: 'translate(-50%, -50%)',
 
   height: '50vh',
-  width: '100px',
+  width: '100%',
   backgroundImage: 'url(https://i.pinimg.com/originals/24/ae/3a/24ae3a446a327998d404729123ea4be0.jpg)',
   backgroundPosition: 'center',
   backgroundSize: 'cover',

@@ -1,38 +1,22 @@
 import React, {FC} from 'react';
-import {string} from "yup";
 import ModalWindow from "./modal/ModalWindow";
+
+import { findExample, setStatusEnter } from '../store/checkedEnterSlice';
+import { useAppDispatch } from '../hooks/redux';
 
 type IAuth = {
     name: string
 }
-const initialStateName: IAuth = {
-    name: "Biola"
-}
 
-interface MSignProps {
-    text: string;
-    checkAvtorized?: boolean;
-    onClick?: () => void;
-}
-interface ISubmitResult {
-    status: boolean;
-    statusCode: string;
-    apiToken: string;
-}
-
-const initialState: ISubmitResult = {
-    status: false,
-    statusCode: "",
-    apiToken: "",
-};
-
-interface IUser {
-    apiKey?: any;
-    apiLogin?: any;
-}
 
 
 const Auth :FC<IAuth> = ({name}) => {
+    const num = 1;
+
+    const dispatch = useAppDispatch();
+    dispatch(setStatusEnter(42))
+    console.log("this is", dispatch(findExample()));
+
     return (
         <div>
             <h1>THIS IS AUTH PAGE</h1>

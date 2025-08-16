@@ -1,6 +1,11 @@
 import { CustomStepperEnum } from '../enam';
 import { ReactNode } from 'react';
 
+export interface ICheckedFormDataState {
+  statusEnter: number;
+  statusView: boolean;
+}
+
 export interface IDataTable {
   arr?: any[];
 }
