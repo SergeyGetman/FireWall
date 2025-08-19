@@ -20,7 +20,8 @@ export enum CustomButtonTextEnum {
 export enum CustomEnumPath {
   home = '/',
   modalWindow = '/add',
-  pageHandler = 'avtorized'
+  pageHandler = 'kanban',
+  testedPath = 'tested',
 }
 
 export enum NotificationValidationEnum {

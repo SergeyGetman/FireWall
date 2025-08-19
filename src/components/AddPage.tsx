@@ -3,10 +3,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ButtonElement from './button/ButtonElement';
 import { getTransports } from '../api/api';
-import { useDispatch, useSelector } from 'react-redux';
-import { addDataPages, getStatus } from '../store/globalSlice';
-import { AccountPagesState } from '../types';
+import { useDispatch } from 'react-redux';
+
 import { CustomTextEnum } from '../enam';
+import { useAppDispatch } from '../hooks/redux';
 
 const AddPage = () => {
   const notify = () => toast(CustomTextEnum.textMessageAdd);
@@ -14,7 +14,7 @@ const AddPage = () => {
 
 
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     getTransports().then((response) => {

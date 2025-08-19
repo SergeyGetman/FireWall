@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { addSteper } from './store/globalSlice';
 import {useCallback, useState} from 'react';
 import { useAppDispatch } from './hooks/redux';
+import Kanban from './pages/Kanban';
 
 
 
